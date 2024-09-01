@@ -78,8 +78,8 @@ x = torch.rand(size)
 y = torch.rand(size)
 output_torch = x + y
 output_triton = add(x, y)
-print(output_torch)
-print(output_triton)
+print(f'Triton result: {output_triton}')
+print(f'Torch result: {output_torch}')
 print(f'The maximum difference between torch and triton is '
       f'{torch.max(torch.abs(output_torch - output_triton))}')
 
